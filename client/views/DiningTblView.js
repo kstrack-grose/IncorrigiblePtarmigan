@@ -1,15 +1,15 @@
 /* dining table views will be populated by guest views */
 
 var DiningTblView = Backbone.View.extend({
-  //instanticate it with a collection and an ID (num)
-
+  //instanticate it with an ID (num)
+  collection: Guests,
   // it will be a table of guests as table rows
   tagName: 'table',
 
   class: 'diningTbl',
 
   initialize: function() {
-    // on any updates, re-render
+    // on any updates, re-render --??
     this.listenTo(this.collection, 'update', this.render);
     // render initally
     this.render();
