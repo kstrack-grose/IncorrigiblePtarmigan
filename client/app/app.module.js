@@ -29,8 +29,8 @@ angular.module('seatly', [
       })
       .when('/guestinput', {
         templateUrl: 'components/guestInput/guestInputView.html',
-        controller: 'guestInputCtrl',
-        controllerAs: 'guestInput'
+        controller: 'guestInputCtrl'
+        //controllerAs: 'guestInput'
       });
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('AttachTokens');
