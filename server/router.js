@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var Guest = require('../app-db/guests/guestModel');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 
 
