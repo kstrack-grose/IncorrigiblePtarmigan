@@ -6,7 +6,7 @@
   	<base href="/">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="custom.css">
+    <!-- <link rel="stylesheet" type="text/css" href="custom.css"> -->
   	<style>
        body { padding-top:50px; padding-bottom:50px;  }
   	</style>
@@ -15,8 +15,13 @@
   </head>
 
   <body ng-app="seatly">
+    <div ng-controller="guestInputCtrl">
+    
+      <div ng-view>
+      </div>
 
-    <div ng-view></div>
+    </div>
+    
 
     <script src="app/components/auth/auth.js"></script>
     <script src="app/components/guestInput/guestInputController.js"></script>

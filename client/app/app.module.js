@@ -16,12 +16,12 @@ angular.module('seatly', [
         templateUrl: 'components/auth/signupView.html',
         controller: 'AuthController'
       })
-      .when('/', {
-        // default view before we implement auth will be edit page
-        templateUrl: 'components/edit/editView.html',
-        controller: 'editController',
-        controllerAs: 'edit'
-      })
+      // .when('/', {
+      //   // default view before we implement auth will be edit page
+      //   templateUrl: 'components/edit/editView.html',
+      //   controller: 'editController',
+      //   controllerAs: 'edit'
+      // })
       .when('/edit', {
         templateUrl: 'components/edit/editView.html',
         controller: 'editController',
