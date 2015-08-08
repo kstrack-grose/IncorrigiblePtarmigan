@@ -1,7 +1,7 @@
-angular.module('seatly.guestInput', [])
-.controller('guestInputCtrl', function($scope, guestInputFactory){
+angular.module('guestInput', [])
+.controller('guestInputCtrl', function ($scope, guestInputFactory){
 	$scope.guests = [];
-
+	$scope.message = 'hello';
 	$scope.guestName = "";
 	$scope.friendName = "";
 

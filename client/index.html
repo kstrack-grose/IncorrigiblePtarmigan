@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="guestInput">
   <head>
     <meta charset="utf-8">
   	<title>Seatly</title>
   	<base href="/">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="custom.css"> -->
-  	<style>
-       body { padding-top:50px; padding-bottom:50px;  }
-  	</style>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
   </head>
 
-  <body ng-app="seatly">
-    <div ng-controller="guestInputCtrl">
-    
-      <div ng-view>
+  <body ng-controller"guestInputCtrl">
+
+    <p>{{ message }}</p>
+
+    <form name="guestInputForm">
+      <input ng-model="guestName" type="text" class="form-control" placeholder="Your Guest's Name">
+      <input ng-model="friendName" type="text" class="form-control" placeholder="Your Guest's Plus-One">
+      <div>
+        <button ng-click="addGuest()">Add Next Guest</button>
       </div>
+      <div>
+        <button ng-click="addAllGuests()">Done</button>
+      </div>
+      
+    </form>
 
-    </div>
-    
 
-    <script src="app/components/auth/auth.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <script src="app/components/guestInput/guestInputController.js"></script>
-    <script src="app/components/auth/authServices.js"></script>
-    <script src="app/components/start/startController.js"></script>
-    <script src="app/components/edit/editController.js"></script>
-    <script src="app/components/constraintInput/constraintInputController.js"></script>
-    <script src="app/app.module.js"></script>
+    <script src="app/components/guestInput/guestInputFactory.js"></script>
 
   </body>
 </html>
