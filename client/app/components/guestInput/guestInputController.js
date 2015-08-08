@@ -1,5 +1,5 @@
-angular.module('seatly.guestInput', [])
-.controller('guestInputCtrl', function($scope, guestInputFactory){
+angular.module('seatly.guestInput')
+.controller('guestInputCtrl', ['guestInputFactory', function($scope, guestInputFactory){
 	$scope.guests = [];
 
 	$scope.guestName = "";
@@ -31,4 +31,4 @@ angular.module('seatly.guestInput', [])
     return guestInputFactory.addAllGuests($scope.guests);
 	};
 
-});
+}]);
