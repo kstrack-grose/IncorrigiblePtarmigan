@@ -28,12 +28,12 @@ exports.makeDiningTables = function(guests, numPerTable) {
   // go through the tables
   // TODO: when there are too many couples, it will currently add them to the same table even if it exceeds the size
   while (anyFriends && guestList.length > 0) {
-    console.log('looping');
+    // console.log('looping');
     for (var tableIndex = 0; tableIndex < allTables.length; tableIndex++) {
       // find guests with friends
       if (anyFriends) {
         for (var guestIndex = 0; guestIndex < guestList.length; guestIndex++) {
-          console.log('index--->' + guestIndex);
+          // console.log('index--->' + guestIndex);
           // check if guest has friend
           var friend = guestList[guestIndex].friendName;
           if (friend) {
@@ -49,7 +49,7 @@ exports.makeDiningTables = function(guests, numPerTable) {
             allTables[tableIndex].push(guestToAdd);
             allTables[tableIndex].push(friendToAdd);
 
-            console.log('breaking when we add a friend');
+            // console.log('breaking when we add a friend');
             break;
           }
           if (guestIndex === guestList.length - 1) {
@@ -57,7 +57,7 @@ exports.makeDiningTables = function(guests, numPerTable) {
           }
         }
       } else {
-        console.log('breaking');
+        // console.log('breaking');
         break;
       }
     }
@@ -112,7 +112,7 @@ var guests2 = [{"_id":"55c92b11358e98cc3c57ed0a","guestName":"marco","friendName
 //   {guestName: 'testFriend4', friendName: ''}
 // ];
 
-console.log(exports.makeDiningTables(guests2, 4));
+// console.log(exports.makeDiningTables(guests2, 4));
 
 
 
