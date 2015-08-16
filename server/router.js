@@ -180,7 +180,6 @@ module.exports = function(app, express) {
     Guest.findOneAndRemove({guestName: req.body.name}, function(err, guest) {
       if (err) console.log(new Error(err));
       else {
-        console.log('---------------------> 183');
         res.end(JSON.stringify(guest));
       }
     })

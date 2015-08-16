@@ -12,7 +12,6 @@ module.exports = {
     try {
       user = jwt.decode(token, 'secret');
       req.user = user;
-      console.log('User ----------------->', req.user);
       next();
     } catch (error) {
       return next(error);
