@@ -16,7 +16,7 @@ angular.module('seatly.list', [])
     // get a list of tables under .data
     .then(function(allGuests) {
       $scope.diningTbls = allGuests.data;
-      console.log(' in init');
+      $scope.inEdit = false;
     })
     .catch(function(err) {
       console.log(new Error(err));
@@ -59,8 +59,6 @@ angular.module('seatly.list', [])
     var pplPerTable = $scope.diningTbls[0].guestsAtTable.length;
     guestInputFactory.sortGuests(pplPerTable)
     .then(function() {
-      // ensures that the view is in list, not edit
-      $scope.reverseRedirect();
       $scope.init();
     })
     .catch(function(err) {

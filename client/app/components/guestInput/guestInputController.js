@@ -67,8 +67,6 @@ angular.module('seatly.guestInput', [])
       
     }
 
-
-    console.log($scope.guests);
 		// reset the guest input fields
 		$scope.guestName = '';
 		$scope.friendName = '';
@@ -137,9 +135,11 @@ angular.module('seatly.guestInput', [])
 
   // verify that constraints aren't going to cause errors
   $scope.verifyConstraints = function() {
-    var result = $scope.guest !== $scope.enemy; 
-    // find scope guest in index
-      // make sure guest.friendName is not scope.enemy
+    // ensure they're not the same
+    var theSame = $scope.guest === $scope.enemy; 
+    // ensure friends are not enemies
+    var conflicting = $scope.guest.friendName === $scope.enemy.guestName;
+    return !(theSame || conflicting);
   };
 
   $scope.signout = function() {
