@@ -21,7 +21,6 @@ angular.module('seatly.guestInput', [])
 
 	// save number of guests per tables; move on to adding guests
 	$scope.moveOn = function() {
-    debugger;
     $scope.peoplePerTable = parseInt($scope.peoplePerTable);
     if ($scope.peoplePerTable) {
   		$scope.peopleInput = false;
@@ -143,10 +142,15 @@ angular.module('seatly.guestInput', [])
   // verify that constraints aren't going to cause errors
   $scope.verifyConstraints = function() {
     // ensure they're not the same
-    var theSame = $scope.guest === $scope.enemy; 
-    // ensure friends are not enemies
-    var conflicting = $scope.guest.friendName === $scope.enemy.guestName;
-    return !(theSame || conflicting);
+    debugger;
+    var empty = $scope.guest && $scope.enemy;
+    if (!!empty) {
+      var theSame = $scope.guest === $scope.enemy; 
+      // ensure friends are not enemies
+      var conflicting = $scope.guest.friendName === $scope.enemy.guestName;
+    }
+
+    return !(empty || theSame || conflicting);
   };
 
   $scope.signout = function() {
