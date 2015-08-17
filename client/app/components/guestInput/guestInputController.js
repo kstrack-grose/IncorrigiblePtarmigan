@@ -137,7 +137,9 @@ angular.module('seatly.guestInput', [])
 
   // verify that constraints aren't going to cause errors
   $scope.verifyConstraints = function() {
-    return $scope.guest !== $scope.enemy; 
+    var result = $scope.guest !== $scope.enemy; 
+    // find scope guest in index
+      // make sure guest.friendName is not scope.enemy
   };
 
   $scope.signout = function() {
