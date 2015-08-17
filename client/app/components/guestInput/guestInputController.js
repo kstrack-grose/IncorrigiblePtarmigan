@@ -14,6 +14,7 @@ angular.module('seatly.guestInput', [])
 	$scope.guestInput = false;
 	$scope.constraintInput = false;
   $scope.showError = false;
+  $scope.constraintError = false;
 
 	// variable to reset pristine status of input after user clicks "Continue adding guests"
 	$scope.isPristineAgain = false;
@@ -117,18 +118,27 @@ angular.module('seatly.guestInput', [])
 
 	// add bi-directional constraints
 	$scope.addConstraint = function() {
-		// For 2 dropdowns: Guest in col 1 is 'guest', guest in col 2 is 'enemy'
-    // access the constraints array of the guest; if enemy hasn't been added, add it
-    if ($scope.guest && $scope.guest.constraints.indexOf($scope.enemy.guestName) === -1) {
-			$scope.guest.constraints.push($scope.enemy.guestName);
+    if ($scope.verifyConstraints()) {
+  		// For 2 dropdowns: Guest in col 1 is 'guest', guest in col 2 is 'enemy'
+      // access the constraints array of the guest; if enemy hasn't been added, add it
+      if ($scope.guest && $scope.guest.constraints.indexOf($scope.enemy.guestName) === -1) {
+  			$scope.guest.constraints.push($scope.enemy.guestName);
+      }
+  		if ($scope.enemy && $scope.enemy.constraints.indexOf($scope.guest.guestName) === -1) {
+  			$scope.enemy.constraints.push($scope.guest.guestName);
+  		}
+  		// reset guest and enemy fields
+  		$scope.guest = '';
+  		$scope.enemy = '';
+    } else {
+      $scope.constraintError = true;
     }
-		if ($scope.enemy && $scope.enemy.constraints.indexOf($scope.guest.guestName) === -1) {
-			$scope.enemy.constraints.push($scope.guest.guestName);
-		}
-		// reset guest and enemy fields
-		$scope.guest = '';
-		$scope.enemy = '';
 	};
+
+  // verify that constraints aren't going to cause errors
+  $scope.verifyConstraints = function() {
+    return $scope.guest !== $scope.enemy; 
+  };
 
   $scope.signout = function() {
   	Auth.signout();

@@ -229,3 +229,10 @@ div #edit {
 	padding-left: 20px;
 	border-radius: 10px;
 }
+
+.notValid {
+	background-color: #EF7126;
+	padding: 5px;
+	text-align: center;
+	margin: 5px 60px 5px 40px;
+}
