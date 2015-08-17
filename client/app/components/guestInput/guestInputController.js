@@ -21,8 +21,15 @@ angular.module('seatly.guestInput', [])
 
 	// save number of guests per tables; move on to adding guests
 	$scope.moveOn = function() {
-		$scope.peopleInput = false;
-		$scope.guestInput = true;
+    debugger;
+    $scope.peoplePerTable = parseInt($scope.peoplePerTable);
+    if ($scope.peoplePerTable) {
+  		$scope.peopleInput = false;
+  		$scope.guestInput = true;
+      $scope.constraintError = false;
+    } else {
+      $scope.constraintError = true;
+    }
 	};
 
 	// add a guest and optional +1 to guests view

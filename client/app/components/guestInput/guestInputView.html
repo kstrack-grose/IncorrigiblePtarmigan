@@ -22,6 +22,9 @@
 			<input class="table-size-input" ng-model="peoplePerTable" placeholder="Number required" required>
 			<button class="btn btn-default add-next-guest" ng-click="moveOn()" ng-disabled="numOfPpl.$invalid">Add Guest Information</button>
 		</form>
+		<div ng-show="constraintError" class="alert alert-danger">
+			<h4>That is not a number; please try again</h4>
+		</div>
 	</div>
   <!-- view to input guests -->
 	<div ng-show="guestInput">
@@ -111,7 +114,7 @@
 	  		<button class="btn btn-default add-next-guest" id="top-margin" ng-click="addConstraint()">Update and Add More Enemies</button>
 	  	<!-- </div> -->
 	  <!-- </div> -->
-	  <div ng-show="constraintError" class='notValid'>
+	  <div ng-show="constraintError" class="alert alert-danger">
 	  	<h4>That is not a valid constraint; please try again</h4>
 	  </div>
 
