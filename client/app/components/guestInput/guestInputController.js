@@ -143,7 +143,7 @@ angular.module('seatly.guestInput', [])
   $scope.verifyConstraints = function() {
     // ensure they're not the same
     debugger;
-    var empty = $scope.guest && $scope.enemy;
+    var empty = (!$scope.guest && !$scope.enemy);
     if (!!empty) {
       var theSame = $scope.guest === $scope.enemy; 
       // ensure friends are not enemies
