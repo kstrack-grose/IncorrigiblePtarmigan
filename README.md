@@ -2,7 +2,7 @@
 
 # Project Name: Seatly
 
-App that lets users create socially harmonious seating charts for events, with weddings as our target use case. 
+An app that lets users create socially harmonious seating charts for events, with weddings as our target use case. 
 
 ## Team
 
@@ -22,7 +22,7 @@ App that lets users create socially harmonious seating charts for events, with w
 
 ## Usage
 
-> Some usage instructions
+Fork the repo to start working with our code base.
 
 ## Requirements
 
@@ -53,4 +53,4 @@ View the project roadmap [here](https://github.com/IncorrigiblePtarmigan/Incorri
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/IncorrigiblePtarmigan/IncorrigiblePtarmigan/blob/master/_CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://github.com/IncorrigiblePtarmigan/IncorrigiblePtarmigan/blob/master/CONTRIBUTING.md) for contribution guidelines.
