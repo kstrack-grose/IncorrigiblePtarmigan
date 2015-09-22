@@ -4,6 +4,8 @@
 
 An app that lets users create socially harmonious seating charts for events, with weddings as our target use case. 
 
+[See our website here!](seatly.herokuapp.com)
+
 ![seatly sign in page](https://lh6.googleusercontent.com/-iNA-msHvvsg/VgHBejcWfiI/AAAAAAAAAL4/U33pMoJCnuo/w1118-h643-no/seatly-home.png)
 ![seatly guest list input](https://lh5.googleusercontent.com/-v-ZlgDKjZ3w/VgHBeZPsOtI/AAAAAAAAALw/r9k-1qy83ec/w1118-h642-no/seatly-guests.png)
 
